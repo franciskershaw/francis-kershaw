@@ -4,6 +4,7 @@
 /* Inter, Poppins, Raleway have been imported, cycle through them to find the best one */
 body {
   font-family: "Poppins", sans-serif;
+  color: rgba(10, 25, 47, 0.85);
 }
 
 .bg-primary {

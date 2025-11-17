@@ -66,14 +66,6 @@ const MobileNav = () => {
         <div className="flex flex-col items-center justify-center pt-16 px-6 h-full">
           {/* Navigation Links */}
           <nav className="w-full space-y-12 h-full flex flex-col items-center justify-center">
-            <div className="flex items-center gap-4 text-3xl">
-              <a href="#">
-                <FaLinkedin />
-              </a>
-              <a href="#">
-                <FaGithub />
-              </a>
-            </div>
             {navLinks.map((link) => (
               <div
                 key={link.label}
@@ -82,6 +74,14 @@ const MobileNav = () => {
                 {link.label}
               </div>
             ))}
+            <div className="flex items-center gap-4 text-3xl">
+              <a href="#">
+                <FaLinkedin />
+              </a>
+              <a href="#">
+                <FaGithub />
+              </a>
+            </div>
           </nav>
         </div>
       </div>
