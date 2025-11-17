@@ -1,5 +1,6 @@
 import { useState } from "react";
-import navLinks from "./navLinks";
+import navLinks from "./navLinks.ts";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hamburger = ({
   setIsExpanded,
@@ -9,14 +10,13 @@ const Hamburger = ({
   isExpanded: boolean;
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log("handleClick");
     e.stopPropagation();
     setIsExpanded(!isExpanded);
   };
 
   return (
     <button
-      className="group relative z-50 inline-flex w-12 h-12 text-center items-center justify-center rounded transition"
+      className="border group relative z-50 inline-flex w-12 h-12 text-center items-center justify-center rounded transition"
       aria-pressed={isExpanded}
       onClick={handleClick}
     >
@@ -57,21 +57,27 @@ const MobileNav = () => {
 
   return (
     <div className="md:hidden">
-      {/* <div className="z-45 transition-transform duration-300 border"> */}
       <Hamburger setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
-      {/* </div> */}
       <div
-        className={`fixed top-0 right-0 h-full border transform w-2/3 ${
+        className={`fixed bg-primary top-0 right-0 h-full border transform w-2/3 ${
           isExpanded ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in-out z-40`}
       >
-        <div className="flex flex-col items-center pt-16 px-6">
+        <div className="flex flex-col items-center justify-center pt-16 px-6 h-full">
           {/* Navigation Links */}
-          <nav className="w-full space-y-6">
+          <nav className="w-full space-y-12 h-full flex flex-col items-center justify-center">
+            <div className="flex items-center gap-4 text-3xl border">
+              <a href="#">
+                <FaLinkedin />
+              </a>
+              <a href="#">
+                <FaGithub />
+              </a>
+            </div>
             {navLinks.map((link) => (
               <div
                 key={link.label}
-                className="flex items-center gap-3 text-lg hover:underline transition-colors"
+                className="border flex items-center gap-3 text-xl hover:underline transition-colors"
               >
                 {link.label}
               </div>
