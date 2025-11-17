@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="py-4 border flex flex-col items-center justify-center gap-4">
       {/* Social links */}
-      <div className="flex items-center gap-4 text-2xl border">
+      <div className="flex items-center gap-4 text-2xl border md:hidden">
         <a href="#">
           <FaLinkedin />
         </a>
@@ -13,6 +13,7 @@ const Footer = () => {
           <FaGithub />
         </a>
       </div>
+
       {/* Designed and built by */}
       <div className="flex flex-col items-center justify-center border">
         <p className="text-sm">Designed and built by</p>
