@@ -8,8 +8,9 @@ function App() {
     <div className="min-h-screen bg-primary">
       <Navbar />
 
-      <HeroSection />
-
+      <div className="px-6">
+        <HeroSection />
+      </div>
       <Footer />
     </div>
   );

@@ -59,14 +59,14 @@ const MobileNav = () => {
     <div className="md:hidden">
       <Hamburger setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
       <div
-        className={`fixed bg-primary top-0 right-0 h-full border transform w-2/3 ${
+        className={`border fixed bg-primary top-0 right-0 h-full transform w-2/3 ${
           isExpanded ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in-out z-40`}
       >
         <div className="flex flex-col items-center justify-center pt-16 px-6 h-full">
           {/* Navigation Links */}
           <nav className="w-full space-y-12 h-full flex flex-col items-center justify-center">
-            <div className="flex items-center gap-4 text-3xl border">
+            <div className="flex items-center gap-4 text-3xl">
               <a href="#">
                 <FaLinkedin />
               </a>
@@ -77,7 +77,7 @@ const MobileNav = () => {
             {navLinks.map((link) => (
               <div
                 key={link.label}
-                className="border flex items-center gap-3 text-xl hover:underline transition-colors"
+                className="flex items-center gap-3 text-xl hover:underline transition-colors"
               >
                 {link.label}
               </div>
