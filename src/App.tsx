@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
       <div className="px-6">
         <HeroSection />
+        <AboutSection />
       </div>
       <Footer />
     </div>

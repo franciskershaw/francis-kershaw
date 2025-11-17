@@ -16,7 +16,7 @@ const Hamburger = ({
 
   return (
     <button
-      className="border group relative z-50 inline-flex w-12 h-12 text-center items-center justify-center rounded transition"
+      className="border group relative z-50 inline-flex w-12 h-12 text-center items-center justify-center transition"
       aria-pressed={isExpanded}
       onClick={handleClick}
     >
