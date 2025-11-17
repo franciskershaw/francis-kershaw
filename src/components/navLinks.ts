@@ -1,18 +1,18 @@
 const navLinks = [
   {
-    label: "Link 1",
+    label: "My work",
     href: "/link-1",
   },
   {
-    label: "Link 2",
+    label: "About me",
     href: "/link-2",
   },
   {
-    label: "Link 3",
+    label: "Contact me",
     href: "/link-3",
   },
   {
-    label: "Link 4",
+    label: "Blog",
     href: "/link-4",
   },
 ];
